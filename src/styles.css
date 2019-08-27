@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 *::after,
 *::before {
   margin: 0;
@@ -12,7 +11,13 @@ body {
 }
 
 body {
-  font: 100% "Armio", sans-serif;
+  font: 100% "Arimo", sans-serif;
+}
+
+.filter-wrapper,
+.keyword-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .filter-wrapper {
@@ -29,7 +34,7 @@ body {
 #keyword {
   border: 1px solid #ccc;
   padding: 10px;
-  font: 1.5em "Armio", sans-serif;
+  font: 1.5em "Arimo", sans-serif;
   width: 50%;
   outline: none;
   transition: border 0.5s ease-in-out;
@@ -59,6 +64,7 @@ body {
   color: rgb(105, 105, 105);
   border: 1px solid #ccc;
   border-top: none;
+  /*so things don't jump around*/
   position: absolute;
   left: 25%;
   top: calc(50% + 25px);

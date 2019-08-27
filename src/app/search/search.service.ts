@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class SearchService {
 
-  clientID: string = '';
+  clientID: string = '3efebec10bbb43209574d2cc4e07eac9';
   baseUrl: string = 'https://api.spotify.com/v1/search?type=artist&limit=10&client id=' + this.clientID + '&q=';
 
   constructor(private httpClient: HttpClient) { }

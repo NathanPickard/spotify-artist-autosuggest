@@ -1,13 +1,16 @@
 <section class="filter-wrapper">
   <div class="keywork-wrapper">
-    <input type="text" id="keyword" placeholder="Search for artists..." autofocus />
+    <input [formControl]="queryField" type="text" id="keyword" placeholder="Search for artists..." autofocus />
 
   </div>
+
   <ul class="filter-select">
-    <li class="filter-select-list">
-      <img src="" alt="" width="50" height="50">
+    <li *ngFor="let result of results" class="filter-select-list">
+      <img src="{{ result.images['2']?.url }}" alt="" width="50" height="50">
       <p class="artist-name"></p>
+      <span class="tags" *ngFor="let genre of result?.genres | slice:0:6">{{ genre }}</span>
     </li>
-    <span class="tags"></span>
   </ul>
+
+
 </section>
