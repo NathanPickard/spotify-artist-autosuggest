@@ -13,7 +13,6 @@ import { SearchService } from '../search/search.service';
 export class SearchComponent implements OnInit {
 
   results: any[] = [];
-  // response: any;
   queryField: FormControl = new FormControl();
 
   constructor(private searchService: SearchService) { }

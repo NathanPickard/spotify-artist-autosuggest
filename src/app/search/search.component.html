@@ -1,7 +1,7 @@
 <section class="filter-wrapper">
+
   <div class="keywork-wrapper">
     <input [formControl]="queryField" type="text" id="keyword" placeholder="Search for artists..." autofocus />
-
   </div>
 
   <ul class="filter-select">
@@ -11,6 +11,5 @@
       <span class="tags" *ngFor="let genre of result?.genres | slice:0:6">{{ genre }}</span>
     </li>
   </ul>
-
 
 </section>
