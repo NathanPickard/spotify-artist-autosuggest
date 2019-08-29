@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +19,9 @@ export class SearchService {
   search(queryString: string) {
     let _URL = this.baseUrl + queryString;
     return this.httpClient.get(_URL);
+  }
+
+  getHeaders() {
+    return new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': `Bearer ${environment.spotifyToken}` })
   }
 }
